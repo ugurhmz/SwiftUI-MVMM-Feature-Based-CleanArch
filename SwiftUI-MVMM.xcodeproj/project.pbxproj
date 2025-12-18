@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1F70273F2EF43CA100843384 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1F70273E2EF43CA100843384 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1F70270E2EF431EF00843384 /* SwiftUI-MVMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVMM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F70273F2EF43CA100843384 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "SwiftUI-MVMM";
 			packageProductDependencies = (
+				1F70273E2EF43CA100843384 /* Alamofire */,
 			);
 			productName = "SwiftUI-MVMM";
 			productReference = 1F70270E2EF431EF00843384 /* SwiftUI-MVMM.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 1F7027052EF431EF00843384;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1F70273D2EF43CA100843384 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1F70270F2EF431EF00843384 /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F70273D2EF43CA100843384 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F70273E2EF43CA100843384 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F70273D2EF43CA100843384 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F7027062EF431EF00843384 /* Project object */;
 }
