@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_MVMMApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+           MovieListView()
         }
     }
 }
