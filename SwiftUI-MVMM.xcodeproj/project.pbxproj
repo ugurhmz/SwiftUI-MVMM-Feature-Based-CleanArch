@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F4D67022EF5A56500710A39 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F4D67012EF5A56500710A39 /* Secrets.xcconfig */; };
+		1F4D67072EF5BC2C00710A39 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1F4D67062EF5BC2C00710A39 /* Kingfisher */; };
 		1F70273F2EF43CA100843384 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1F70273E2EF43CA100843384 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4D67072EF5BC2C00710A39 /* Kingfisher in Frameworks */,
 				1F70273F2EF43CA100843384 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +89,7 @@
 			name = "SwiftUI-MVMM";
 			packageProductDependencies = (
 				1F70273E2EF43CA100843384 /* Alamofire */,
+				1F4D67062EF5BC2C00710A39 /* Kingfisher */,
 			);
 			productName = "SwiftUI-MVMM";
 			productReference = 1F70270E2EF431EF00843384 /* SwiftUI-MVMM.app */;
@@ -118,6 +121,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1F70273D2EF43CA100843384 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1F4D67052EF5BC2C00710A39 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1F70270F2EF431EF00843384 /* Products */;
@@ -360,6 +364,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1F4D67052EF5BC2C00710A39 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
 		1F70273D2EF43CA100843384 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -371,6 +383,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1F4D67062EF5BC2C00710A39 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F4D67052EF5BC2C00710A39 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		1F70273E2EF43CA100843384 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1F70273D2EF43CA100843384 /* XCRemoteSwiftPackageReference "Alamofire" */;
