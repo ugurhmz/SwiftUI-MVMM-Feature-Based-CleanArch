@@ -12,10 +12,14 @@ struct MovieListView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                
+            List(movieViewModel.movies) {item in
+                Text(item.title)
+            }
+            .task {
+                await movieViewModel.loadMovies()
             }
         }
+       
     }
 }
 

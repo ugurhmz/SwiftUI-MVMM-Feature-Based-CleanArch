@@ -8,6 +8,6 @@
 import Foundation
 
 struct APIConstants {
-    static let baseURL = ""
+    static let baseURL = "https://api.themoviedb.org/3"
     static let bearerToken = ""
 }
