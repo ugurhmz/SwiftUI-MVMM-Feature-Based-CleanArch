@@ -15,7 +15,7 @@ enum ViewState {
 
 @MainActor
 class MoviesViewModel: ObservableObject {
-    @Published var movies: [MovieResponseModel] = []
+    @Published var movies: [MovieDTO] = []
     @Published var state: ViewState = .idle
     @Published var errorMessage: String?
     
@@ -34,17 +34,17 @@ class MoviesViewModel: ObservableObject {
         isFetching = true
         errorMessage = nil
         
-        if movies.isEmpty {
-            state = .loading
-        }
+        if movies.isEmpty { state = .loading }
         
         do {
-            let newMovies = try await service.fetchMovies(page: currentPage)
+            let rawData = try await service.fetchMovies(page: currentPage)
             
-            if newMovies.isEmpty {
+            let cleanData = rawData.map { $0.toDto(response: $0) }
+            
+            if cleanData.isEmpty {
                 canLoadMore = false
             } else {
-                self.movies.append(contentsOf: newMovies)
+                self.movies.append(contentsOf: cleanData)
                 self.currentPage += 1
             }
             state = .idle

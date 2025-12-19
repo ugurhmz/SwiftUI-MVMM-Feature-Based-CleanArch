@@ -21,7 +21,7 @@ struct MoviePosterView: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-            case .failure(let error):
+            case .failure(_):
                 ZStack {
                     Color.gray.opacity(0.1)
                     Image(systemName: "photo.fill")
