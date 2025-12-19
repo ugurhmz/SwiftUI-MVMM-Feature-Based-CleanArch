@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F4D67022EF5A56500710A39 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1F4D67012EF5A56500710A39 /* Secrets.xcconfig */; };
 		1F70273F2EF43CA100843384 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1F70273E2EF43CA100843384 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F4D67012EF5A56500710A39 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		1F70270E2EF431EF00843384 /* SwiftUI-MVMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVMM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1F4D67042EF5A65500710A39 /* Exceptions for "SwiftUI-MVMM" folder in "SwiftUI-MVMM" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1F70270D2EF431EF00843384 /* SwiftUI-MVMM */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1F7027102EF431EF00843384 /* SwiftUI-MVMM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1F4D67042EF5A65500710A39 /* Exceptions for "SwiftUI-MVMM" folder in "SwiftUI-MVMM" target */,
+			);
 			path = "SwiftUI-MVMM";
 			sourceTree = "<group>";
 		};
@@ -37,6 +52,7 @@
 		1F7027052EF431EF00843384 = {
 			isa = PBXGroup;
 			children = (
+				1F4D67012EF5A56500710A39 /* Secrets.xcconfig */,
 				1F7027102EF431EF00843384 /* SwiftUI-MVMM */,
 				1F70270F2EF431EF00843384 /* Products */,
 			);
@@ -118,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F4D67022EF5A56500710A39 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +153,7 @@
 /* Begin XCBuildConfiguration section */
 		1F7027172EF431F100843384 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4D67012EF5A56500710A39 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -200,6 +218,7 @@
 		};
 		1F7027182EF431F100843384 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4D67012EF5A56500710A39 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -257,6 +276,7 @@
 		};
 		1F70271A2EF431F100843384 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4D67012EF5A56500710A39 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -265,6 +285,7 @@
 				DEVELOPMENT_TEAM = GFWJUABSS9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-MVMM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,6 +306,7 @@
 		};
 		1F70271B2EF431F100843384 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4D67012EF5A56500710A39 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,6 +315,7 @@
 				DEVELOPMENT_TEAM = GFWJUABSS9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-MVMM/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
