@@ -15,7 +15,6 @@ struct MovieListView: View {
             ZStack {
                 Color.black.ignoresSafeArea()
                     contentBuilder
-                
             }
             .task {
                 await movieVM.loadMovies()
@@ -73,7 +72,17 @@ extension MovieListView {
     // movieList
     private var movieList: some View {
         List {
-            ForEach(movieVM.movies) { movie in
+            Text("Movies")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 10)
+                .padding(.bottom, 8)
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+            
+            ForEach(movieVM.movies, id:\.id) { movie in
                 ZStack {
                     MovieRowView(movieDto: movie)
                     NavigationLink(value: movie) {
@@ -83,12 +92,31 @@ extension MovieListView {
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(top: 6, leading:0, bottom: 6, trailing: 0))
+                .onAppear {
+                    movieVM.loadMoreMovies(currentItem: movie)
+                }
             }
+            
+            if !movieVM.movies.isEmpty {
+                HStack {
+                    Spacer()
+                    ProgressView()
+                        .id(UUID())
+                        .controlSize(.regular)
+                        .tint(.white)
+                    Spacer()
+                }
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
+                .padding(.vertical, 8)
+            }
+            
         }
         .listStyle(.plain)
         .scrollContentBackground(.hidden)
     }
 }
+
 
 #Preview {
     MovieListView()
