@@ -57,7 +57,7 @@ class MoviesViewModel: ObservableObject {
     }
     
     func loadMoreMovies(currentItem item: MovieDTO) {
-        let thresholdIndex = self.movies.index(self.movies.endIndex, offsetBy: -3)
+        let thresholdIndex = self.movies.index(self.movies.endIndex, offsetBy: -1)
         
         if let index = self.movies.firstIndex(where: { $0.id == item.id }),
            index == thresholdIndex {

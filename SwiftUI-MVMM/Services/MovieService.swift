@@ -20,6 +20,8 @@ final class MovieService: MovieServiceProtocol {
     
     
     func fetchMovies(page: Int) async throws -> [MovieResponseModel] {
+        try? await Task.sleep(for: .seconds(1))
+        
         let endPoint = MoviesEndPoint.discover(page: page)
         let response = try await networkManager.request(endpoint: endPoint, type: MovieGeneralResponse.self)
         
