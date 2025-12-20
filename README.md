@@ -105,3 +105,5 @@ TMDB_TOKEN = sizin_uzun_bearer_tokeniniz_buraya
 ### 👨‍💻 Geliştirici Notları
 
 Bu proje; modülerlik, okunabilirlik ve performans ön planda tutularak, gerçek bir production uygulamasının sahip olması gereken standartlarda geliştirilmiştir. **Magic String** ve **Magic Number** kullanımından kaçınılmış, `Enum` ve `Constant` yapıları tercih edilmiştir.
+<br>
+<img width="554" height="594" alt="Screenshot 2025-12-20 at 04 58 59" src="https://github.com/user-attachments/assets/44531715-b8df-49fd-854f-b8d9b7dda7ad" />
